@@ -10,6 +10,7 @@ class TingtingAPI {
         $this->apiKey = $key;
     }
 
+    //send message to a phone number through Zalo OA
     public function sendZNS($to, $sender, $tempid, $tempdata, $failoverdata = null, $sendTime = '', $timezone = '') {
 
         $params = [
@@ -64,6 +65,7 @@ class TingtingAPI {
         }
     }
 
+    //send message to a phone number through SMS
     public function sendSMS($to, $sender, $content, $sendTime = '', $timezone = '') {
         $params = [
             'to' => $to,
@@ -107,6 +109,7 @@ class TingtingAPI {
         }
     }
 
+    //call to a phone number and reading the content using text to speech
     public function call($to, $sender, $content, $sendTime = '', $timezone = '') {
         $params = [
             'to' => $to,
@@ -148,6 +151,7 @@ class TingtingAPI {
         }
     }
 
+    
     public function session($configId, $to = '') {
         $params = [
             'config_id' => $configId
