@@ -151,7 +151,7 @@ class TingtingAPI {
         }
     }
 
-    
+
     public function session($configId, $to = '') {
         $params = [
             'config_id' => $configId
